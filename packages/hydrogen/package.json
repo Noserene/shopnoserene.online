@@ -1,0 +1,58 @@
+{
+  "name": "@shopify/hydrogen",
+  "publishConfig": {
+    "access": "public",
+    "@shopify:registry": "https://registry.npmjs.org"
+  },
+  "type": "module",
+  "version": "2.0.0-alpha.1",
+  "main": "dist/index.cjs",
+  "module": "dist/production/index.js",
+  "types": "dist/production/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup --clean --config ../../tsup.config.ts",
+    "dev": "tsup --watch --config ../../tsup.config.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/production/index.d.ts",
+      "module": {
+        "development": "./dist/development/index.js",
+        "default": "./dist/production/index.js"
+      },
+      "require": "./dist/index.cjs",
+      "import": {
+        "development": "./dist/development/index.js",
+        "default": "./dist/production/index.js"
+      },
+      "default": {
+        "development": "./dist/development/index.js",
+        "default": "./dist/production/index.js"
+      }
+    },
+    "./build": {
+      "types": "./dist/build/index.d.ts",
+      "require": "./dist/build/index.cjs",
+      "import": "./dist/build/index.js",
+      "default": "./dist/build/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "@remix-run/react": "*",
+    "@remix-run/server-runtime": "0.0.0-experimental-d3a06f6e6",
+    "@shopify/hydrogen-react": "*"
+  },
+  "dependencies": {
+    "recursive-readdir": "^2.2.3"
+  },
+  "devDependencies": {
+    "@shopify/hydrogen-react": "*",
+    "@types/recursive-readdir": "^2.2.1"
+  }
+}
