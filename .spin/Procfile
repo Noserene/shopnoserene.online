@@ -1,0 +1,1 @@
+server: cd /home/spin/src/github.com/Shopify/hydrogen && yarn build; cd /home/spin/src/github.com/Shopify/hydrogen/templates/demo-store && yarn dev --port $PORT
