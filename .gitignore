@@ -1,0 +1,11 @@
+node_modules
+
+/.mf
+.env
+.vscode
+.turbo
+.cache
+/test-results/
+/playwright-report/
+/playwright/.cache/
+**/dist
