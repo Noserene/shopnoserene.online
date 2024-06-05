@@ -1,0 +1,2 @@
+# .graphqlrc.yml
+schema: node_modules/@shopify/hydrogen-react/storefront.schema.json
