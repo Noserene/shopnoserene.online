@@ -1,0 +1,8 @@
+node_modules
+
+/.mf
+.env
+.vscode
+/test-results/
+/playwright-report/
+/playwright/.cache/
