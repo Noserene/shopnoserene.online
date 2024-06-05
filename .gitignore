@@ -1,0 +1,8 @@
+node_modules
+
+/.mf
+.env
+.vscode
+.turbo
+.cache
+**/dist
